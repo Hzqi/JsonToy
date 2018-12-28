@@ -34,7 +34,6 @@ resolver: lts-13.0
 #  - wai
 packages:
 - location: .
-- location: /Users/huangziqi/Desktop/HaskellAny/hello-world
 
 # Dependency packages to be pulled from upstream that are not in the resolver
 # using the same syntax as the packages field.
