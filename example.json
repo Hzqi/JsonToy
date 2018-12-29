@@ -1,0 +1,13 @@
+{
+	"name":"jacky",
+	"age":20,
+	"money":100000.59,
+	"score":-0.5E+10,
+	"friends":["aaa","bbb","ccc"],
+	"obj":{
+		"name":"what?",
+		"objs":[
+			{"a":"a"},{"b":"b"}
+		]
+	}
+} 
