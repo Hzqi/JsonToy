@@ -4,7 +4,7 @@ This is a toy for parsing Json in Haskell.
 
 这是一个用Haskell写的Json解析玩具。
 
-##Usage
+###Usage
 Import the module ```JsonToy``` ,and then you can parse Json string to Json types with function```fromJson```. And you can generate to Json string with function ```toJson```.
 
 ```haskell
@@ -19,7 +19,7 @@ jsonElement = fromJson str
 str = toJson jsonElement
 ```
 
-##用法
+###用法
 导入```JsonToy```模块，然后可以使用函数```fromJson```解析json字符串成对应的Json类型。也可以使用函数```toJson```将Json类型值生成json字符串。
 
 ```haskell
@@ -34,7 +34,7 @@ jsonElement = fromJson str
 str = toJson jsonElement
 ```
 
-##Json Types
+###Json Types
 Json Types in Haskell like :
 
 ```
@@ -48,7 +48,7 @@ data JsonElement =
   deriving (Show)
 ```  
 
-##Json 类型
+###Json 类型
 在Haskell对应的Json类型如下：
 
 ```
