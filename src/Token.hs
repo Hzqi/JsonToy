@@ -9,4 +9,4 @@ data JsonToken =
   | TNULL -- 空
   | TTRUE | TFALSE -- true false
   | TCOLON -- :冒号
-  deriving (Show)
+  deriving (Eq,Show)

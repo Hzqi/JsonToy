@@ -12,7 +12,7 @@ readNumber str = stateMachineNum 0 str []
 stateMachineNum :: Int -> String -> String -> (String,String) -- 状态 -> 字符串 -> 临时结果 -> (结果，剩余的字符串)
 -- 0
 stateMachineNum 0 (hd:tl) temp
-  | hd == '+' || hd == '-' = stateMachineNum 1 tl (hd:temp)
+  | hd == '-' = stateMachineNum 1 tl (hd:temp)
   | hd `elem` digit = stateMachineNum 2 tl (hd:temp)
   | otherwise = error "error in state 0"
 -- 1
