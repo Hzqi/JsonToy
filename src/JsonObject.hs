@@ -26,3 +26,15 @@ toJsonStr (JObject obj) = '{' : objJsonStr ++ "}"
     elems = Map.toList obj
     li = map (\i -> (toJsonStr $ JString $ fst i) ++ ":" ++ (toJsonStr $ snd i) ) elems
     objJsonStr = foldl (\i j -> i ++ "," ++ j) (head li) (tail li)
+
+getElementByObject :: JsonElement -> String -> Maybe JsonElement
+getElementByObject (JObject jmap) name = Map.lookup name jmap
+getElementByObject _ _ = Nothing
+
+getListByArray :: JsonElement -> [JsonElement]
+getListByArray (JArray arr) = arr
+getListByArray _ = []
+
+getMapByObject :: JsonElement -> Map.Map String JsonElement
+getMapByObject (JObject jmap) = jmap
+getMapByObject _ = Map.empty
