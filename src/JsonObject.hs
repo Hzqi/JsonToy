@@ -19,13 +19,15 @@ toJsonStr (JBool b) = if b == True then "true" else "false"
 toJsonStr JNull = "null"
 toJsonStr (JArray arr) = '[' : arrJsonStr ++ "]"
   where
-    arrJsonStr = foldl (\i j -> i ++ "," ++ j) (head li) (tail li)
     li = map (\i -> toJsonStr i) arr
+    arrJsonStr = if null li then ""
+      else foldl (\i j -> i ++ "," ++ j) (head li) (tail li)
 toJsonStr (JObject obj) = '{' : objJsonStr ++ "}"
   where
     elems = Map.toList obj
     li = map (\i -> (toJsonStr $ JString $ fst i) ++ ":" ++ (toJsonStr $ snd i) ) elems
-    objJsonStr = foldl (\i j -> i ++ "," ++ j) (head li) (tail li)
+    objJsonStr = if null li then ""
+      else foldl (\i j -> i ++ "," ++ j) (head li) (tail li)
 
 getElementByObject :: JsonElement -> String -> Maybe JsonElement
 getElementByObject (JObject jmap) name = Map.lookup name jmap
