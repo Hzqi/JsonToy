@@ -1,12 +1,12 @@
 {
-	"name":"jacky",
+	"name"          :          "jacky",
 	"age":20,
 	"money":100000.59,
 	"score":-0.5E+10,
 	"bool":true,
 	"bool2":false,
 	"null1":null,
-	"friends":["aaa","bbb","ccc"],
+	"friends":[                   "aaa","bbb","ccc"],
 	"obj":{
 		"name":"what?",
 		"objs":[
